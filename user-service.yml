@@ -1,0 +1,16 @@
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:mem:testdb
+        username: sa
+        password: "{cipher}AQAQpcf7JlBvmq4CcEBjXAtg9xYToAHjpFpgTtqoOuuMSKbNHGFecPaQ8rKP0SOnosLJJ6rbXK7UbMIcFU352/RzWBoBlKJVFjr+e/EPAYp6ACG/qV3MTRajeT0AgyepvJ2ECDaDmHl+3vrayNb49Ol6f9jNUXK2rm/p6P5CNvf6apbj2aPJr6/INfqTXjaWCIspZ3lzEjYiEUSGvnVQ/V9GQqpWXJbq5xFcZg5+ouFMcB2A1ctgDWCWIeVMwIlS23Sjy8SrgXYPnToQhNYMgeLOXskpCpVG0X2v86XXH1bdwhcq4oqbsNoNwMwMxlB1AZfVMIphygjiBo+UoD1N3N/ExfJPxCe/YCZuO7joZAIEp+7ihc9MyckVL30FqhVcl4M="
+
+token:
+    expiration_time: 8640000001
+    secret: my_token_native_application_changed_#2
+
+gateway:
+    ip: 192.168.31.218
+
+
+keytool -genkeypair -alias apiEncryptionKey -keyalg RSA -dname "CN=lee ui tae, OU=API Development, O=utlee.duckdns.org, L=Seoul, C=KR" -keypass "test1234" -keystore apiEncryptionKey.jks -storepass "test1234"
